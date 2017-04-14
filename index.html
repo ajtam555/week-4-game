@@ -3,8 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	
-	<title>CrystalsCollector!</title>
+	<title>Fun Whips</title>
 
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
@@ -12,8 +13,8 @@
 </head>
 
 	<body>
-		<div>CrystalsCollector!</div>
-		<div>
+		<div id="title">Sports Car Collection</div>
+		<div id="instruct">
 			<p>You will be given a random number at the start of the game.</p>
 			
 			<p>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.</p>
@@ -24,18 +25,23 @@
 
 			<p>Each time when the game starts, the game will change the values of each crystal.</p>
 		</div>
-
-		<div id="goal"></div>
-		<div id="wins-loss"></div>
-		<div id="crystals">
-			<div id="crystal1"></div>
-			<div id="crystal2"></div>
-			<div id="crystal3"></div>
-			<div id="crystal4"></div>
+		
+		<div id="stats-section">
+			<div id="goal"></div>
+			<div id="wins-loss"></div>
 		</div>
-		<div id="running-total"></div>
-		<div id="crystal-number"></div>
 
+		<div id="cars-section">
+			<div id="r8"></div>
+			<div id="huracan"></div>
+			<div id="gt4"></div>
+			<div id="nsx"></div>
+		</div>
+		<div id="tracking-section">
+			<div id="running-total"></div>
+			<div id="crystal-number"></div>
+		</div>
+		
 	</body>
 
 </html>

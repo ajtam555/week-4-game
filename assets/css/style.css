@@ -1,0 +1,138 @@
+body {
+	background: url(../images/background.jpg) top center no-repeat;
+	background-attachment:fixed;
+	background-size:100% 100%;
+}
+
+#title {
+	background: url(../images/checkered.jpg);
+	width: 200px;
+	padding: 20px;
+	margin: 10px;
+	text-align: center;
+	color: red;
+	font-size: 25px;
+	font-weight: bold;
+	border-radius: 30px;
+	border-style: solid;
+	border-width: 2px;
+}
+
+p {
+	margin: 15px;
+}
+
+#instruct {
+	margin: 10px;
+	padding: 20px;
+	width: 600px;
+	background-color: #cccccc;
+	border-radius: 30px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+#stats-section {
+	width: 1200px;
+	display: inline-block;
+}
+
+#goal {
+	margin: 10px;
+	padding: 35px;
+	width: 200px;
+	background-color: #00b359;
+	float: left;
+	border-radius: 30px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+#wins-loss {
+	margin: 10px;
+	padding: 35px;
+	width: 200px;
+	background-color: #00b359;
+	float: left;
+	border-radius: 30px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+#cars-section {
+	width: 1200px;
+	display: inline-block;
+}
+
+#r8 {
+	content: url(../images/r8.jpg);
+	width: 270px;
+	height: 170px;
+	float: left;
+	margin: 10px;
+	border-radius: 30px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: red;
+}
+
+#huracan {
+	content: url(../images/huracan.jpg);
+	width: 270px;
+	height: 170px;
+	float: left;
+	margin: 10px;
+	border-radius: 30px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: red;
+}
+
+#gt4 {
+	content: url(../images/gt4.jpg);
+	width: 270px;
+	height: 170px;
+	float: left;
+	margin: 10px;
+	border-radius: 30px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: red;
+}
+
+#nsx {
+	content: url(../images/nsx.jpg);
+	width: 270px;
+	height: 170px;
+	float: left;
+	margin: 10px;
+	border-radius: 30px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: red;
+}
+
+#tracking-section {
+}
+
+#running-total {
+	margin: 10px;
+	padding: 15px;
+	width: 200px;
+	background-color: #00b359;
+	border-radius: 30px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+#crystal-number {
+	margin: 10px;
+	padding: 15px;
+	width: 200px;
+	height: 100px;
+	background-color: #00b359;
+	border-radius: 30px;
+	border-style: solid;
+	border-width: 1px;
+
+}
