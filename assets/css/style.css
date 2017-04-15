@@ -50,7 +50,7 @@ p {
 
 #wins-loss {
 	margin: 10px;
-	padding: 35px;
+	padding: 5px;
 	width: 200px;
 	background-color: #00b359;
 	float: left;
@@ -112,12 +112,9 @@ p {
 	border-color: red;
 }
 
-#tracking-section {
-}
-
-#running-total {
+#score-title {
 	margin: 10px;
-	padding: 15px;
+	padding: 5px;
 	width: 200px;
 	background-color: #00b359;
 	border-radius: 30px;
@@ -125,9 +122,9 @@ p {
 	border-width: 1px;
 }
 
-#crystal-number {
+#total-score {
 	margin: 10px;
-	padding: 15px;
+	padding: 5px 0px 0px 20px;
 	width: 200px;
 	height: 100px;
 	background-color: #00b359;
