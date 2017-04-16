@@ -34,7 +34,7 @@ var carGame = {
 	total_score: 0,
 	done: false,
 
-	initialize: function() {
+	initialize: function(){
 
 		// Set random target number
 		this.target = Math.floor(Math.random() * 102 + 19);
@@ -64,6 +64,33 @@ var carGame = {
 		console.log(this.nsx_num + " nsx");
 	},
 
+	reset: function(){
+
+		this.total_score = 0;
+
+		// Set random target number
+		this.target = Math.floor(Math.random() * 102 + 19);
+
+		// Display target number
+		$('#target').html(carGame.target);
+
+		// Display total score for current game
+		$('#total-score').html(this.total_score);
+
+		// Set random car numbers
+		this.r8_num = Math.floor(Math.random() * 12 + 1);
+		console.log(this.r8_num + " r8");
+
+		this.huracan_num = Math.floor(Math.random() * 12 + 1);
+		console.log(this.huracan_num + " huracan");
+
+		this.gt4_num = Math.floor(Math.random() * 12 + 1);
+		console.log(this.gt4_num + " gt4");
+
+		this.nsx_num = Math.floor(Math.random() * 12 + 1);
+		console.log(this.nsx_num + " nsx");
+	},
+
 	r8: function(){
 		carGame.total_score = carGame.r8_num + carGame.total_score;
 		$('#total-score').html(carGame.total_score);
@@ -75,11 +102,13 @@ var carGame = {
 			this.wins++;
 			$('#wins').html('<p id="wins">Wins: ' + this.wins + '</p>');
 			$('#wins-loss').prepend('<p>"You won!!"</p>');
+			carGame.reset();
 
 		} else if(carGame.total_score > carGame.target) {
 			this.losses++;
 			$('#loss').html('<p id="loss">Losses: ' + this.losses + '</p>');
 			$('#wins-loss').prepend('<p>"You lost!!"</p>');
+			carGame.reset();
 		}
 	},
 
@@ -95,12 +124,13 @@ var carGame = {
 			this.wins++;
 			$('#wins').html('<p id="wins">Wins: ' + this.wins + '</p>');
 			$('#wins-loss').prepend('<p>You won!!</p>');
+			carGame.reset();
 
 		} else if(carGame.total_score > carGame.target) {
 			this.losses++;
 			$('#loss').html('<p id="loss">Losses: ' + this.losses + '</p>');
 			$('#wins-loss').prepend('<p>"You lost!!"</p>');
-
+			carGame.reset();
 		}
 	},
 
@@ -115,11 +145,13 @@ var carGame = {
 			this.wins++;
 			$('#wins').html('<p id="wins">Wins: ' + this.wins + '</p>');
 			$('#wins-loss').prepend('<p>"You won!!"</p>');
+			carGame.reset();
 		
 		} else if(carGame.total_score > carGame.target) {
 			this.losses++;
 			$('#loss').html('<p id="loss">Losses: ' + this.losses + '</p>');
 			$('#wins-loss').prepend('<p>"You lost!!"</p>');
+			carGame.reset();
 		}
 	},
 
@@ -129,17 +161,18 @@ var carGame = {
 		console.log("nsx function " + carGame.nsx_num);
 		console.log(carGame.total_score);
 		console.log(carGame.target);
-		
+
 		if(carGame.total_score === carGame.target){
 			this.wins++;
 			$('#wins').html('<p id="wins">Wins: ' + this.wins + '</p>');
 			$('#wins-loss').prepend('<p>"You won!!"</p>');
+			carGame.reset();
 
 		} else if(carGame.total_score > carGame.target) {
 			this.losses++;
 			$('#loss').html('<p id="loss">Losses: ' + this.losses + '</p>');
 			$('#wins-loss').prepend('<p>"You lost!!"</p>');
-
+			carGame.reset();
 		}
 	}
 
