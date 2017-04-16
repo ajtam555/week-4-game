@@ -1,30 +1,42 @@
-// Variables
-
-// Functions
-window.onload = function() {
+// Game
+$(document).ready(function(){
 
 	// Call initialize function to start game
 	carGame.initialize();
 
-	// Call each function associated with the each id
-	// Set random number 
-	// $(".car").each(function() {
-	// 	$('#r8').on("click", carGame.r8);
-	// 	$('#huracan').on("click", carGame.huracan);
-	// 	$('#gt4').on("click", carGame.gt4);
-	// 	$('#nsx').on("click", carGame.nsx);
-	// }
+		$('#r8').on("click", function(){
+			carGame.r8(carGame.r8_num);
+		});
 
-	// $('#r8').on("click", carGame.r8);
-	// $('#huracan').on("click", carGame.huracan);
-	// $('#gt4').on("click", carGame.gt4);
-	// $('#nsx').on("click", carGame.nsx);
-	// Loop through each .car class
-	// $(".car").each(function(index) {
-	//http://stackoverflow.com/questions/24197807/creating-a-variable-with-a-variable-in-an-each-loop-jquery
- 
-}	
+		$('#huracan').on("click", function(){
+			carGame.huracan(carGame.huracan_num);
+		});
 
+		$('#gt4').on("click", function(){
+			carGame.gt4(carGame.gt4_num);
+		});
+
+		$('#nsx').on("click", function(){
+			carGame.nsx(carGame.nsx_num);
+		});
+
+		// Check if 
+		if(!carGame.done) {
+			
+			if(carGame.total_score === carGame.target){
+				$('#total-score').html(carGame.total_score);
+				carGame.done = true;
+			}
+			else if(carGame.total_score > carGame.target){
+				$('#total-score').html(carGame.total_score);
+			}
+			else if(carGame.total_score != carGame.target){
+				$('#total-score').html(carGame.total_score);
+			}
+		}
+	});
+
+// Game Object
 var carGame = {
 
 	wins: 0,
@@ -34,15 +46,16 @@ var carGame = {
 	gt4_num: 0,
 	nsx_num: 0,
 	total_score: 0,
+	done: false,
 
 	initialize: function() {
 
 		// Set random target number
-		var targetNum = Math.floor(Math.random() * 102 + 19);
+		var target = Math.floor(Math.random() * 102 + 19);
 
 		// Display target number
-		$('#target').html(targetNum);
-		console.log(targetNum);
+		$('#target').html(target);
+		console.log(target + " target");
 
 		// Display wins and losses count
 		$('#wins').html('<p id="wins">Wins: ' + carGame.wins + '</p>');
@@ -53,38 +66,44 @@ var carGame = {
 
 		// Set random car numbers
 		r8_num = Math.floor(Math.random() * 12 + 1);
-		console.log(r8_num);
+		console.log(r8_num + " r8");
 
 		huracan_num = Math.floor(Math.random() * 12 + 1);
-		console.log(huracan_num);
+		console.log(huracan_num + " huracan");
 
 		gt4_num = Math.floor(Math.random() * 12 + 1);
-		console.log(gt4_num);
+		console.log(gt4_num + " gt4");
 
 		nsx_num = Math.floor(Math.random() * 12 + 1);
-		console.log(nsx_num);
-
+		console.log(nsx_num + " nsx");
 	},
 
-	r8: function() {
-		
-		console.log(r8_num);
+	r8: function(r8_num) {
+		carGame.total_score = carGame.r8_num + carGame.total_score;
+		$('#total-score').html(carGame.total_score);
+		console.log("r8 function");
+		console.log(carGame.total_score);
 	},
 
-	huracan: function() {
-		
-		console.log(huracan_num);
+	huracan: function(huracan_num) {
+		carGame.total_score = carGame.huracan_num + carGame.total_score;
+		$('#total-score').html(carGame.total_score);
+		console.log("huracan function");
+		console.log(carGame.total_score);
 	},
 
-	gt4: function() {
-		
-		console.log(gt4_num);
+	gt4: function(gt4_num) {
+		carGame.total_score = carGame.gt4_num + carGame.total_score;
+		$('#total-score').html(carGame.total_score);
+		console.log("gt4 function");
+		console.log(carGame.total_score);
 	},
 
-	nsx: function() {
-		
-		console.log(nsx_num);
-
+	nsx: function(nsx_num) {
+		carGame.total_score = carGame.nsx_num + carGame.total_score;
+		$('#total-score').html(carGame.total_score);
+		console.log("nsx function");
+		console.log(carGame.total_score);
 	}
 
 }
