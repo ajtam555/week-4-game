@@ -19,7 +19,7 @@ $(document).ready(function(){
 		$('#nsx').on("click", function(){
 			carGame.nsx();
 		});
-	});
+});
 
 // Game Object
 var carGame = {
@@ -41,7 +41,6 @@ var carGame = {
 
 		// Display target number
 		$('#target').html(carGame.target);
-		console.log(carGame.target + " target");
 
 		// Display wins and losses count
 		$('#wins').html('<p id="wins">Wins: ' + carGame.wins + '</p>');
@@ -52,16 +51,12 @@ var carGame = {
 
 		// Set random car numbers
 		this.r8_num = Math.floor(Math.random() * 12 + 1);
-		console.log(this.r8_num + " r8");
 
 		this.huracan_num = Math.floor(Math.random() * 12 + 1);
-		console.log(this.huracan_num + " huracan");
 
 		this.gt4_num = Math.floor(Math.random() * 12 + 1);
-		console.log(this.gt4_num + " gt4");
 
 		this.nsx_num = Math.floor(Math.random() * 12 + 1);
-		console.log(this.nsx_num + " nsx");
 	},
 
 	reset: function(){
@@ -79,24 +74,17 @@ var carGame = {
 
 		// Set random car numbers
 		this.r8_num = Math.floor(Math.random() * 12 + 1);
-		console.log(this.r8_num + " r8");
 
 		this.huracan_num = Math.floor(Math.random() * 12 + 1);
-		console.log(this.huracan_num + " huracan");
 
 		this.gt4_num = Math.floor(Math.random() * 12 + 1);
-		console.log(this.gt4_num + " gt4");
 
 		this.nsx_num = Math.floor(Math.random() * 12 + 1);
-		console.log(this.nsx_num + " nsx");
 	},
 
 	r8: function(){
 		carGame.total_score = carGame.r8_num + carGame.total_score;
 		$('#total-score').html(carGame.total_score);
-		console.log("r8 function " + carGame.r8_num);
-		console.log(carGame.total_score);
-		console.log(carGame.target);
 
 		if(carGame.total_score === carGame.target){
 			this.wins++;
@@ -115,9 +103,6 @@ var carGame = {
 	huracan: function(){
 		carGame.total_score = carGame.huracan_num + carGame.total_score;
 		$('#total-score').html(carGame.total_score);
-		console.log("huracan function " + carGame.huracan_num);
-		console.log(carGame.total_score);
-		console.log(carGame.target);
 
 		if(carGame.total_score === carGame.target){
 			console.log("asdfadf");
@@ -137,9 +122,6 @@ var carGame = {
 	gt4: function(){
 		carGame.total_score = carGame.gt4_num + carGame.total_score;
 		$('#total-score').html(carGame.total_score);
-		console.log("gt4 function " + carGame.gt4_num);
-		console.log(carGame.total_score);
-		console.log(carGame.target);
 
 		if(carGame.total_score === carGame.target){
 			this.wins++;
@@ -158,9 +140,6 @@ var carGame = {
 	nsx: function(){
 		carGame.total_score = carGame.nsx_num + carGame.total_score;
 		$('#total-score').html(carGame.total_score);
-		console.log("nsx function " + carGame.nsx_num);
-		console.log(carGame.total_score);
-		console.log(carGame.target);
 
 		if(carGame.total_score === carGame.target){
 			this.wins++;
@@ -175,7 +154,6 @@ var carGame = {
 			carGame.reset();
 		}
 	}
-
 }
 
 
